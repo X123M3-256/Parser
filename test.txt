@@ -1,0 +1,29 @@
+test(lol,something(+(300,4.0),5.6))
+
+
+type Array2D<T>[x,y] T[x*y];
+
+function index<T>(Array2D<T> array,int x,int x)->T
+{
+return index(array,x+y*dimensions(array,0));
+}
+
+
+type Matrix<T>[rows,columns] Array2D<T>[columns,rows];
+
+function rows (Matrix matrix)->int
+{
+return dimensions(matrix,0);
+}
+
+function cols (Matrix matrix)->int
+{
+return dimensions(matrix,1);
+}
+
+function <T>[r1,r2,c1,c2](Matrix<T>[r1,c1] a,Matrix<T>[r2,c2] b)->Matrix<T>[r1,c2]
+{
+require(=(rows(a),cols(b)));
+Matrix<T>[r1,c2] result;
+
+}
